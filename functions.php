@@ -79,14 +79,23 @@ function registar_post_type_books()
 			'capability_type'     => 'post',
 			'supports'            => array(
 				'title', 'editor', 'author', 'thumbnail',
-				'excerpt','custom-fields', 'trackbacks', 'comments',
-				'revisions', 'page-attributes', 'post-formats','featured-image',
+				'excerpt','custom-fields', 'comments',
+				'revisions', 'page-attributes', 'post-formats'
 				)
 		);
 	
 		register_post_type( 'slug', $args );
 }
 	
-add_action( 'init', 'registar_post_type_books' );
+add_action( 'after_setup_theme', 'registar_post_type_books' );
+
+
+function registar_taxonomy_books(){
+
+
+
+	
+}
+
 
 ?>
